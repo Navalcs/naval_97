@@ -1,1 +1,69 @@
-print("hello")
+def __init__(self):
+
+        self.name = ""
+
+        self.address = ""
+
+        self.phone = ""
+
+        self.subject_specialization = ""
+
+        self.monthly_salary = 0
+
+        self.income_tax = 0
+
+                                                                                # Method
+
+    def input_details(self):
+
+        self.name = input("Enter Teacher's Name: ")
+
+        self.address = input("Enter Address: ")
+
+        self.phone = input("Enter Phone Number: ")
+
+        self.subject_specialization = input("Enter Subject Specialization: ")
+
+        self.monthly_salary = float(input("Enter Monthly Salary: "))
+
+                                                                                # Method
+
+    def compute_income_tax(self):
+
+        annual_salary = 12 * self.monthly_salary
+
+        if annual_salary > 175000:
+
+            self.income_tax = 0.05 * (annual_salary - 175000)
+
+                                                                                # Method
+
+    def display_details(self):
+
+        print("Teacher's Name:", self.name)
+
+        print("Address:", self.address)
+
+        print("Phone Number:", self.phone)
+
+        print("Subject Specialization:", self.subject_specialization)
+
+        print("Monthly Salary:", self.monthly_salary)
+
+        print("Income Tax:", self.income_tax)
+
+                                                                                # Main m
+
+def main():
+
+    teacher = Teacher()
+
+    teacher.input_details()
+
+    teacher.compute_income_tax()
+
+    teacher.display_details()
+
+if __name__ == "__main__":
+
+main()
